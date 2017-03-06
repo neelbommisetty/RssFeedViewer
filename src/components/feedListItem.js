@@ -25,7 +25,7 @@ export default class FeedListItem extends Component {
     return (
       <div className={classes()}>
         <Link to={() => `/${this.props.data.id}`}>{this.props.data.feed.url}</Link>
-        <button className="remove-link" onClick={this.removeFeed}>X</button>
+        <button className="remove-link btn btn-link" onClick={this.removeFeed}>X</button>
       </div>
     );
   }
