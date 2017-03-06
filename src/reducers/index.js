@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import {reducer as toastrReducer} from 'react-redux-toastr'
+import { reducer as toastrReducer } from 'react-redux-toastr';
 
 import feeds from './urlsReducer';
 import activeFeed from './activeFeedReducer';

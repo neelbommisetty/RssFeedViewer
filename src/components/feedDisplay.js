@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import FeedCard from './feedCard';
-export default class FeedDisplay extends Component { //eslint-disable-
+export default class FeedDisplay extends Component {
   componentWillMount() {
     if (this.props.params && this.props.params.id) {
       const feed = this.props.feeds.filter((item) => item.id === this.props.params.id)[0];
       if (feed) {
         this.props.refreshActiveFeed(feed);
       }
-
     }
   }
   componentWillReceiveProps(props) {
@@ -23,12 +22,15 @@ export default class FeedDisplay extends Component { //eslint-disable-
     return (
       <div className="col-xs-8 feed-display">
         <h1>{this.props.activeFeed.feed ? this.props.activeFeed.feed.title : ''}</h1>
-          {feeds}
+        {feeds}
       </div>
     );
   }
 }
 
 FeedDisplay.propTypes = {
-  activeFeed: React.PropTypes.object,
+  activeFeed: React.PropTypes.object.isRequired,
+  params: React.PropTypes.object.isRequired,
+  feeds: React.PropTypes.array.isRequired,
+  refreshActiveFeed: React.PropTypes.func.isRequired,
 };

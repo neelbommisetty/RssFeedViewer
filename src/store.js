@@ -8,16 +8,16 @@ import rootReducer from './reducers/index';
 
 // create an object for the default data
 const defaultState = {};
-if (localStorage.getItem('feed') && localStorage.getItem('feed') != 'undefined') {
+if (localStorage.getItem('feed') && localStorage.getItem('feed') !== 'undefined') {
   defaultState.feeds = JSON.parse(localStorage.getItem('feed'));
 }
 
 const store = createStore(rootReducer, defaultState, applyMiddleware(thunk, routerMiddleware(browserHistory)));
 
 export const history = syncHistoryWithStore(browserHistory, store);
-if(module.hot) {
-  module.hot.accept('./reducers/',() => {
-    const nextRootReducer = require('./reducers/index').default;
+if (module.hot) {
+  module.hot.accept('./reducers/', () => {
+    const nextRootReducer = require('./reducers/index').default; //eslint-disable-line
     store.replaceReducer(nextRootReducer);
   });
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route } from 'react-router';
 import { Provider } from 'react-redux';
-import ReduxToastr from 'react-redux-toastr'
+import ReduxToastr from 'react-redux-toastr';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 
@@ -17,7 +17,7 @@ const router = (
     <div>
       <Router history={history}>
         <Route path="/" component={App}>
-          <Route path="/:id" component={FeedDisplay}/>
+          <Route path="/:id" component={FeedDisplay} />
         </Route>
       </Router>
       <ReduxToastr

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import FeedListItem from './feedListItem';
 
 export default class Sidebar extends Component { //eslint-disable-line
@@ -13,7 +12,7 @@ export default class Sidebar extends Component { //eslint-disable-line
     this.form.reset();
   }
   render() {
-    const urls = this.props.feeds.map((feed, i) => <FeedListItem { ...this.props } i={i} key={feed.id} data={feed}/>);
+    const urls = this.props.feeds.map((feed, i) => <FeedListItem {...this.props} i={i} key={feed.id} data={feed} />);
     return (
       <div className="col-xs-4 sidebar">
         <form className="form-inline url-form" ref={(form) => { this.form = form; }}>

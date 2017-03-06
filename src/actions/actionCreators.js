@@ -16,7 +16,7 @@ export function removeLink(i) {
   return {
     type: 'REMOVE_FEED',
     i,
-  }
+  };
 }
 
 function fetchRss(url, dispatch) {
@@ -27,17 +27,17 @@ function fetchRss(url, dispatch) {
     .then((data) => {
       const id = Math.random().toString(36).substring(7);
       if (data.status === 'error') {
-         dispatch({
+        dispatch({
           type: 'FETCH_ERROR',
-         });
-         toastr.error('Invalid Rss Url', 'Please check the url and try again');
-         return;
+        });
+        toastr.error('Invalid Rss Url', 'Please check the url and try again');
+        return;
       }
       dispatch({
         type: 'FEED_FETCH_SUCCESS',
         data,
         url,
-        id
+        id,
       });
       dispatch(push(`/${id}`));
     })
