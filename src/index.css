@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.feed-display {
+  border-left:2px solid;
+  text-align: center;
+}
+.url-form{
+  border-bottom:2px solid;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.feed-list-item{
+  margin: 10px;
+  padding:10px;
+  border:1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.feed-list-item.active {
+  background-color: darkgray;
+}
+.remove-link,.remove-link:hover,.remove-link:active {
+  color:red;
+}
+.feed-card {
+  text-align: left;
+  padding: 10px;
+  margin:10px;
+  border:1px solid #ebebeb;
+  box-shadow: 3px 6px 9px #e1e1e1;
+}
