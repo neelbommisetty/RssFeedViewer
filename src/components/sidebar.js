@@ -14,7 +14,7 @@ export default class Sidebar extends Component { //eslint-disable-line
   render() {
     const urls = this.props.feeds.map((feed, i) => <FeedListItem {...this.props} i={i} key={feed.id} data={feed} />);
     return (
-      <div className="col-xs-4 sidebar">
+      <div className="sidebar">
         <form className="form-inline url-form" ref={(form) => { this.form = form; }}>
           <div className="form-group">
             <input type="url" className="form-control" ref={(input) => { this.input = input; }} placeholder="example.com/feed" />

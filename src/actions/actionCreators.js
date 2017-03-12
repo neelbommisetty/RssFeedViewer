@@ -12,6 +12,12 @@ export function refreshActiveFeed(feed) {
     feed,
   };
 }
+export function toggleMenu(value) {
+  return {
+    type: 'MENU_ACTIVE',
+    value,
+  };
+}
 export function removeLink(i) {
   return {
     type: 'REMOVE_FEED',

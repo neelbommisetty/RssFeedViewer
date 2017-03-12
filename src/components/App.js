@@ -7,6 +7,7 @@ function mapStateToProps(state) {
   return {
     feeds: state.feeds,
     activeFeed: state.activeFeed,
+    isMenuActive: state.isMenuActive,
   };
 }
 

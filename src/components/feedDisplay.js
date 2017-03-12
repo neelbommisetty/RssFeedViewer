@@ -20,8 +20,8 @@ export default class FeedDisplay extends Component {
   render() {
     const feeds = this.props.activeFeed.items ? this.props.activeFeed.items.map((item, i) => <FeedCard key={i} data={item}/>):''; //eslint-disable-line
     return (
-      <div className="col-xs-8 feed-display">
-        <h1>{this.props.activeFeed.feed ? this.props.activeFeed.feed.title : ''}</h1>
+      <div className="col-xs-12 feed-display">
+        <h1 className="blog-heading">{this.props.activeFeed.feed ? this.props.activeFeed.feed.title : ''}</h1>
         {feeds}
       </div>
     );
